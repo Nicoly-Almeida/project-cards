@@ -1,1 +1,1 @@
-![Logo do Projeto](`./assets/My%20Notebook.png`)
+![Logo do Projeto](./assets/notebook.png)
