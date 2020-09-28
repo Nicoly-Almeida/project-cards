@@ -2,8 +2,10 @@ const express = require("express");
 
 const routes = express.Router();
 const CardController = require("./controllers/CardController");
+const UsersController = require("./controllers/UsersController")
 
 const cards = new CardController();
+const users = new UsersController();
 
 
 routes.get("/", (req,res) => {
@@ -24,6 +26,12 @@ routes.put("/cards/:id", cards.cardupdate)
 
 //Exclusão dos dados
 routes.delete("/cards", cards.deletecard)
+
+//Usuários:
+
+routes.post("/users", users.store);
+
+routes.get("/users", users.user);
 
 
 module.exports = routes

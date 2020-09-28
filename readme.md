@@ -1,8 +1,9 @@
+
 <h1 align="center">
     <img alt="Logo" title="" src="./assets/note.svg" width="400px" />
 </h1>
 
----
+
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -36,4 +37,4 @@ Você pode visualizar o layout do projeto através [desse link.](https://www.fig
 
    •. Faça push para sua conta branch: `git push origin minha-feature.`
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+
