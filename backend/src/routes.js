@@ -30,6 +30,8 @@ routes.delete("/cards", cards.deletecard)
 //Usuários:
 
 routes.post("/users", users.store);
+    
+routes.post("/auth", users.authenticate)
 
 routes.get("/users", users.user);
 
