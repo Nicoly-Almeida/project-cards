@@ -9,4 +9,4 @@ app.use(express.json());
 app.use(routes)
 
 
-app.listen(8080, () => console.log("Server Rodando!"))
+app.listen(3333, () => console.log("Server Rodando!"))
