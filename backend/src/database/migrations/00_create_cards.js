@@ -3,7 +3,7 @@ exports.up = knex =>
         t.increments('id').primary()
         t.string('title').unique().notNullable()
         t.string('description')
-        t.string('data').notNullable().unique()
+        t.string('data').notNullable()
 })
 
 exports.down = knex => 

@@ -4,9 +4,14 @@ class CardController {
     async store(req,res){
         const { title, description } = req.body;
 
+        let date = new Date;
+        let mes = Number(date.getMonth() + 1)
+        let data =  date.getDate() + "/" + 0 + mes + "/" + date.getFullYear()
+
         const result = await knex('cards').insert({
             title,
-            description
+            description,
+            data
         });
 
         return res.json({
