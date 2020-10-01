@@ -20,3 +20,63 @@ h2 {font-family:'Segoe UI', sans-serif; font-size:35px; border-bottom:1px solid 
 .book:last-child{
   margin-right: 0;
 }
+::-webkit-input-placeholder {
+  color: #fff;
+  opacity: .7;
+}
+#root{
+  margin:10px;
+}
+#title-card{
+  color: #fff;
+  margin-top: 5px;
+}
+#delete-card, #colors_random{
+  border:none;
+}
+#description, #description:focus{
+  border:none;
+  color:white;
+  margin-left:-7px;
+}
+#title{
+  border-top:none;
+  border-left: none;
+  border-right:none;
+  background-color:#3E50B0;
+  color:white;
+  border-bottom: white 1px solid;
+}
+#icons{
+  right: 15px;
+  position: absolute;
+  top:20px;
+}
+.card{
+  background-color:#3E50B0; 
+  height:250px;
+  margin:20px;
+
+}
+.card-add{
+  width: 300px;
+  margin-left: 35px;
+  margin-top: 40px;
+}
+.list{
+  width: 310px;
+}
+.card-title{
+  color:white; 
+  border-bottom:1px solid white;
+  margin-right: 100px;
+  margin-left: -15px;
+}
+.card-bottom p{
+  color:white;
+  text-align: right;
+}
+#delete-card, #cor_random{
+  background-color: transparent;
+  border: none;
+}

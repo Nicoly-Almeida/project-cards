@@ -61,26 +61,21 @@
         <div class="col-sm p-0">
           <img src="./livroazul.jpg" width="400px" height="550px"/>
         </div>
-        <div class="col-sm-1 p-0">
-        </div>
-        <div class="card col-sm" style="background:#3E50B0; height:250px">
+        <div class="card col-sm card-add">
+          <div class="card-top">
+            <h6 id="title-card">Escreva um Cartão!</h6>
+          </div>
           <div class="card-body pr-0">
-            <input class="card-title pb-1 w-50" placeholder="Título" id="title" style="border-top:none;border-left: none;border-right:none;background-color:#3E50B0;color:white;"></input>
+            <input class="card-title pb-1 w-50" placeholder="Título" id="title"></input>
             </br>
             </br>
             <textarea id="description" style="width:auto;height: 100px; background-color: #3E50B0;color: white;" placeholder="Descrição"></textarea>
             <a href="./livro.html"><button class="btn btn-light text-right" style="color: #3E50B0;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px" id="add-card"><b>Add Card</b></button></a>
           </div>
         </div>
-
-        <div class="col-sm-1">
-        </div>
         <div id="root"></div>
-
       </div>
       
-      </br>
-        
 
         
       </div>
@@ -94,5 +89,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/listar.js"></script>
+    <script src="scripts/cards.js"></script>
   </body>
 </html>
