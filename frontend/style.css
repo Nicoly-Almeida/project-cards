@@ -80,3 +80,13 @@ h2 {font-family:'Segoe UI', sans-serif; font-size:35px; border-bottom:1px solid 
   background-color: transparent;
   border: none;
 }
+#google-singin{
+  margin:10px;
+}
+#img-google{
+  width: 30px;
+}
+#name-google{
+  margin-left: 5px;
+  margin-top:10px;
+}

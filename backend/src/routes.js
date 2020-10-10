@@ -1,9 +1,10 @@
 const express = require("express");
-
+const UserController = require("./controllers/UserController")
 const routes = express.Router();
 const CardController = require("./controllers/CardController");
 
 const cards = new CardController();
+const users = new UserController();
 
 
 
@@ -25,6 +26,15 @@ routes.put("/cards/:id", cards.cardupdate)
 
 //Exclusão dos dados
 routes.delete("/cards", cards.deletecard)
+
+
+routes.post("/users", users.store)
+
+routes.get("/users", users.read)
+
+routes.post("/card", users.store_cards)
+
+routes.post("/signin", users.login)
 
 
 

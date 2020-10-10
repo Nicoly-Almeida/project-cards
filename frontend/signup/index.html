@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
     <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     
 
     <title>My Notebook</title>
@@ -24,8 +24,8 @@
       <!-- Logo da Navbar -->
 
       
-      <a href="./index.html" style=" float:left !important">
-        <img src="./listras.png" height="20px" width="25px"/>
+      <a href="../" style=" float:left !important">
+        <img src="../assets/logo.svg" height="20px" width="25px"/>
         <h5 class="text-white ml-3  mt-1" style=" float:right !important; font-family: 30px"> <b>My Notebook</b></h5>
       </a>        
     </nav>
@@ -45,7 +45,7 @@
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <input type="email" id="phone" class="form-control mt-0" id="inputEmail4" placeholder="Celular" style="border-top:1px solid #fff; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #3E50B0;">
+              <input type="text" id="phone" class="form-control mt-0" id="inputEmail4" placeholder="Celular" style="border-top:1px solid #fff; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #3E50B0;">
             </div>
             <div class="form-group col-md-6">
               <input type="email" id="email" class="form-control mt-0" id="inputEmail4" placeholder="Email" style="border-top:1px solid #fff; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #3E50B0;">
@@ -53,18 +53,18 @@
           </div>
           <div class="form-row">
              <div class="form-group col-md-6">
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Senha" style="border-top:1px solid #fff; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #3E50B0;">
+              <input type="password" id="senha" class="form-control" id="inputPassword4" placeholder="Senha" style="border-top:1px solid #fff; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #3E50B0;">
             </div>
             <div class="form-group col-md-6">
-              <input type="password" id="senha" class="form-control" id="inputPassword4" placeholder="Repita a senha" style="border-top:1px solid #fff; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #3E50B0;">
+              <input type="password" id="senha-confirmed" class="form-control" id="inputPassword4" placeholder="Repita a senha" style="border-top:1px solid #fff; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #3E50B0;">
             </div>
           </div>
       
           <!-- Continuar -->
           <div class="text-center mb-5 mt-4">
-            <a href=""><button type="button"
+            <button type="button"
              class="btn borda-redonda" id="envio" style="background-color: #3E50B0;color:white; padding-left: 50px;padding-right:50px; border-radius: 50px !important;"
-            ><span style="font-size:22px"><b><i>CADASTRAR</i></b></span></button></a>
+            ><span style="font-size:22px"><b><i>CADASTRAR</i></b></span></button>
           </div>
         </form>
       </div>
@@ -81,6 +81,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="../scripts/firebaseConfig.js"></script>
+    <script src="../scripts/signup.js"></script>
   </body>
 </html>
 
