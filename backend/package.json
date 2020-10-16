@@ -1,27 +1,21 @@
 {
-  "name": "project-luiz",
+  "name": "backend",
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "nodemon src/index.js",
     "knex:migrate": "knex --knexfile knexfile.js migrate:latest"
   },
   "license": "MIT",
   "dependencies": {
-    "backend": "^0.0.0",
-    "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "express": "^4.17.1",
-    "firebase": "^7.22.0",
-    "firebase-admin": "^9.2.0",
-    "jsonwebtoken": "^8.5.1",
-    "knex": "^0.21.5",
-    "nodemailer": "^6.4.13",
-    "sqlite3": "^5.0.0",
-    "totalvoice-node": "^1.10.0"
+    "knex": "^0.21.6",
+    "multer": "^1.4.2",
+    "sqlite3": "^5.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.5"
   }
 }

@@ -1,41 +1,30 @@
 const express = require("express");
-const UserController = require("./controllers/UserController")
+const multer = require("multer");
+const multerConfig = require("./config/multerConfig");
+const book = require("./controllers/BooksController");
+const card = require("./controllers/CardsController");
+
 const routes = express.Router();
-const CardController = require("./controllers/CardController");
 
-const cards = new CardController();
-const users = new UserController();
+const upload = multer(multerConfig)
 
-
-
-routes.get("/", (req,res) => {
-    console.log("My notebook API")
+routes.get("/", (req, res) => {
+    res.send("Olá Mundo!")
 })
 
-//Cadastro de cartão
-routes.post("/cards", cards.store)
-
-//Coleta  de dados
-routes.get("/cards", cards.listcards)
-
-//Coleta de dados específicos
-routes.get("/cards/:id", cards.card)
+routes.post("/book", upload.single('book'), book.store)
+routes.get("/books", book.index);
+routes.post("/cards", card.store);
+routes.get("/books/:id", book.show);
 
 //Alteração de dados 
-routes.put("/cards/:id", cards.cardupdate)
+routes.put("/cards/:id", card.cardupdate)
 
 //Exclusão dos dados
-routes.delete("/cards", cards.deletecard)
+routes.delete("/cards", card.deletecard)
 
-
-routes.post("/users", users.store)
-
-routes.get("/users", users.read)
-
-routes.post("/card", users.store_cards)
-
-routes.post("/signin", users.login)
-
+//Coleta  de dados
+routes.get("/cards", card.listcards)
 
 
 module.exports = routes;
