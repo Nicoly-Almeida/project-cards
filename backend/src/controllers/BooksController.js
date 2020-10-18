@@ -15,19 +15,27 @@ class BooksController{
             "ok": true
         })
     }
-    async index(req, res){
 
-        const result = await knex('books').select("*")
 
-        const bosks = result.map(book => {
-            return res.json({
-                ...result, 
-                link_book: `http://127.0.0.1:3333/uploads/${book}`
-            })
+    //Listagem de Livros
+    async index(req,res){
+        const result = await knex("books").select("*");
+
+        const books = result.map((data)=>{
+            const {id, title, book} = data;
+            return{
+                id:id,
+                title:title,
+                book:book,
+                link_book: `http://localhost:3333/uploads/${book}`,
+            }
         })
-
-        
+            return res.json(books);
     }
+
+
+
+
     async show(req, res){
         const { id } = req.params;
 
