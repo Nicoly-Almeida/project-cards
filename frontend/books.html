@@ -38,7 +38,7 @@
     >
       <!-- Logo da Navbar -->
       <a href="./index.html" style="float: left !important">
-        <img src="./listras.png"  height="20px" width="25px" />
+        <img src="./listras.png" height="20px" width="25px" />
         <h5
           class="text-white ml-3 mt-1"
           style="float: right !important; font-family: 30px"
@@ -66,19 +66,15 @@
           <li class="nav-item active">
             <a class="nav-link text-white" href="./books.html">Books</a>
           </li>
-           <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link text-white" href="./notpads.html">NotPads</a>
           </li>
-           <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link text-white" href="./mybooks.html">MyBooks</a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link text-white" href="./book_upload.html">MyUploads</a>
-          </li>
         </ul>
-      </div>    
-    </nav>  
-
+      </div>
+    </nav>
 
     <!-- Search form -->
     <div
@@ -102,73 +98,22 @@
     </div>
 
     <!-- Books container -->
-    <div class="p-2">
-
-      <!-- Drama -->
-      <div>
-        <h2
-          style="
-            color: #3e50b0;
-            text-shadow: 0 1px 0 #3e50b0;
-            position: absolute;
-            
-            top: 180px;
-            box-shadow: 0 3px 0 black;
-          "
-        >
-          Drama
-        </h2>
-
-        <div class="my-5 d-flex justify-content-center align-items-center">
-          <div class="col book">
-            <a href="livro.html"
-              ><img
-                style="
-                  width: 208px !important;
-                  height: 312px !important;
-                  margin-left: 15px;
-                "
-                src="./livroazul.jpg"
-            /></a>
-          </div>
-          <div class="col book">
-            <a href="livro.html"
-              ><img
-                style="width: 208px !important; height: 312px !important"
-                src="./livroazul.jpg"
-            /></a>
-          </div>
-          <div class="col book">
-            <a href="livro.html"
-              ><img
-                style="width: 208px !important; height: 312px !important"
-                src="./livroazul.jpg"
-            /></a>
-          </div>
-          <div class="col book">
-            <a href="livro.html"
-              ><img
-                style="width: 208px !important; height: 312px !important"
-                src="./livroazul.jpg"
-            /></a>
-          </div>
-          <div class="col book">
-            <a href="livro.html"
-              ><img
-                style="width: 208px !important; height: 312px !important"
-                src="./livroazul.jpg"
-            /></a>
-          </div>
-          <div class="col book">
-            <a href="livro.html"
-              ><img
-                style="width: 208px !important; height: 312px !important"
-                src="./livroazul.jpg"
-            /></a>
-          </div>
-        </div>
+    <div class="p-5">
+      <h2
+        style="
+          color: #3e50b0;
+          text-shadow: 0 1px 0 #3e50b0;
+          box-shadow: 0 3px 0 black;
+        "
+        class="d-inline-block text-left"
+      >
+        Lista de livros
+      </h2>
+      <div id="book-list" class="d-flex flex-wrap justify-content-center">
+        <!-- as imagens são renderizadas -->
       </div>
     </div>
+
     <script src="./scripts/listBooks.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -194,3 +139,4 @@
     <script src="./scripts/users.js"></script>
   </body>
 </html>
+
