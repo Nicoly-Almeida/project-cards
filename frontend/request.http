@@ -1,3 +1,5 @@
-# Get Hello World
-
+# Get livros cadastrados
 GET http://localhost:3333/books
+
+### Get cards
+GET http://localhost:3333/cards
