@@ -35,7 +35,7 @@ function show(cards){
         card.id = id.toString()
         card.style = "background:#3E50B0;"
         console.log(divs)
-        if (divs.length < 2){
+        if (divs.length < 3){
             card.innerHTML += `
             <div class="card-body pr-0">
             <input readonly value="${cardName.value}" class="card-title pb-1 w-50" placeholder="New Card" style="color:white; border-bottom:1px solid white !important; float:left; margin-right:50px; background-color: #3E50B0; border: 0px solid"></input>
