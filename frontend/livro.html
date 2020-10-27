@@ -58,24 +58,34 @@
     <!--Conteúdo !-->
 
     <div class="container mt-5 mb-5" style=""> 
-      <H1 class="text center"> Livro Azul</H1>
+      
 
-      <div class="row mb-5 ">
-        <div class="col-sm p-0">
+        <div class="col-sm-5 p-0" style="float:left">
           <img src="./livroazul.jpg" width="400px" height="550px"/>
         </div>
-        <div class="card col-sm card-add">
-          <div class="card-top">
-            <h6 id="title-card">Escreva um Cartão!</h6>
-          </div>
-          <div class="card-body pr-0">
-            <input class="card-title pb-1 w-50" placeholder="Título" id="title"></input>
-            </br>
-            </br>
-            <textarea id="description" style="width:auto;height: 100px; background-color: #3E50B0;color: white;" placeholder="Descrição"></textarea>
-            <a href="./livro.html"><button class="btn btn-light text-right" style="color: #3E50B0;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px" id="add-card"><b>Add Card</b></button></a>
-          </div>
-        </div>
+        
+        <form onsubmit="return show()" action="#">
+          <div class="container mb-5" id="container">
+            <div class="row">
+              <div class="card col-sm-6 mr-0 ml-0" name="card" style="background:#3E50B0;">
+                <div class="card-body pr-0">
+                  <input id="cardName" class="card-title pb-1 w-50" placeholder="New Card" style="color:white; border-bottom:1px solid white !important; float:left; margin-right:70px; background-color: #3E50B0; border: 0px solid" required></input>
+                  <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:white"></i>
+                  <i class="fa fa-trash-o" aria-hidden="true" style="color:white"></i>
+                  <i class="fa fa-paint-brush" aria-hidden="true" style="color:white"></i>
+      
+                  </br>
+                  </br>
+                  <textarea id="cardContent" placeholder="Descrição..." style="Color: white; background-color: #3E50B0; border: 0px solid" required> </textarea>
+      
+                  <button type="submit" class="btn btn-light text-right" style="color: #3E50B0;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px"><b>Add Card</b></a>
+                </div>
+              </div>
+      
+              <div class="card col-sm-1 m-0 p-0" style="visibility: hidden;">
+              </div>
+            </div>
+        </form>
         <div id="root"></div>
       </div>
       

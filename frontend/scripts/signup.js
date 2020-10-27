@@ -1,9 +1,6 @@
 
 
 
-
-
-
 document.querySelector("#envio").addEventListener("click", () => {
     let email = document.getElementById("email").value
 

@@ -37,9 +37,7 @@
       <!--Icone da Navbar!-->
       <div class="ml-2 collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link text-white" href="./books.html">Books</a>
-          </li>
+        
            <li class="nav-item ">
             <a class="nav-link text-white" href="./notpads.html">NotPads</a>
           </li>
@@ -51,123 +49,58 @@
           </li>
         </ul>
       </div>    
-    </nav>  
+    
 
       <div class="botao"  role="group" aria-label="Basic example">
         <a href="./login.html" style="color: #3E50B0" class="btn btn-light ">Sair <i class="fa fa-sign-in" aria-hidden="true" style="font-size:15px; margin-right:2px; color: #3E50B0 "></i></a>
       </div> 
     </nav>
 
+    <form onsubmit="return show()" action="#">
+      <div class="container mt-5 mb-5" id="container">
+        <div class="row mb-5">
+          <div class="card col-sm-3 mr-0 ml-0" name="card" style="background:#3E50B0;">
+            <div class="card-body pr-0">
+              <input id="cardName" class="card-title pb-1 w-50" placeholder="New Card" style="color:white; border-bottom:1px solid white !important; float:left; margin-right:70px; background-color: #3E50B0; border: 0px solid" required></input>
+              <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:white"></i>
+              <i class="fa fa-trash-o" aria-hidden="true" style="color:white"></i>
+              <i class="fa fa-paint-brush" aria-hidden="true" style="color:white"></i>
+  
+              </br>
+              </br>
+              <textarea id="cardContent" placeholder="Descrição..." style="Color: white; background-color: #3E50B0; border: 0px solid" required> </textarea>
+  
+              <button type="submit" class="btn btn-light text-right" style="color: #3E50B0;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px"><b>Add Card</b></a>
+            </div>
+          </div>
+  
+          <div class="card col-sm-1 m-0 p-0" style="visibility: hidden;">
+          </div>
+        </div>
+    </form>
+
     <!--Conteúdo !-->
-    <div class="container mt-5 mb-5" style="width:95%;">
+    <!-- <div class="container mt-5 mb-5" id="container">
       <div class="row mb-5">
-        <div class="card col-sm" style="background:#3E50B0">
+        <div class="card col-sm-3 mr-0 ml-0" name="card" style="background:#3E50B0;">
           <div class="card-body pr-0">
-            <h5 class="card-title pb-1 w-50" style="color:white; border-bottom:1px solid white; float:left; margin-right:70px">New Card </h5>
+            <input id="cardName" class="card-title pb-1 w-50" placeholder="New Card" style="color:white; border-bottom:1px solid white !important; float:left; margin-right:70px; background-color: #3E50B0; border: 0px solid" required></input>
             <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:white"></i>
             <i class="fa fa-trash-o" aria-hidden="true" style="color:white"></i>
             <i class="fa fa-paint-brush" aria-hidden="true" style="color:white"></i>
 
             </br>
             </br>
-            <p style="Color: white"> Descrição </p>
+            <textarea id="cardContent" placeholder="Descrição..." style="Color: white; background-color: #3E50B0; border: 0px solid" required> </textarea>
 
-            <a href="#" class="btn btn-light text-right" style="color: #3E50B0;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px"><b>Add Card</b></a>
+            <button onclick="show()" class="btn btn-light text-right" style="color: #3E50B0;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px"><b>Add Card</b></a>
           </div>
         </div>
 
-        <div class="col-sm-1">
+        <div class="card col-sm-1 m-0 p-0" style="visibility: hidden;">
         </div>
-
-        <div class="card col-sm" style="background:#FFD700; height:300px">
-          <div class="card-body pr-0">
-            <h5 class="card-title pb-1 w-50" style="color:white; border-bottom:1px solid white; float:left; margin-right:70px">Card Title</h5>
-            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:white"></i>
-            <i class="fa fa-trash-o" aria-hidden="true" style="color:white"></i>
-            <i class="fa fa-paint-brush" aria-hidden="true" style="color:white"></i>
-
-            </br>
-            </br>
-            <p style="Color: white"> Descrição </p>
-
-            <p style="color:white ;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px">28/09/2020</p>
-          </div>
-        </div>
-
-        <div class="col-sm-1">
-        </div>
-
-        <div class="card col-sm" style="background:#FF0000; height:300px">
-          <div class="card-body pr-0">
-            <h5 class="card-title pb-1 w-50" style="color:white; border-bottom:1px solid white; float:left; margin-right:70px">Card Title</h5>
-            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:white"></i>
-            <i class="fa fa-trash-o" aria-hidden="true" style="color:white"></i>
-            <i class="fa fa-paint-brush" aria-hidden="true" style="color:white"></i>
-
-            </br>
-            </br>
-            <p style="Color: white"> Descrição </p>
-
-            <p style="color:white ;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px">28/09/2020</p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row mb-3">
-        <div class="card col-sm" style="background:#FF8C00">
-          <div class="card-body pr-0">
-            <h5 class="card-title pb-1 w-50" style="color:white; border-bottom:1px solid white; float:left; margin-right:70px"> Card Title </h5>
-            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:white"></i>
-            <i class="fa fa-trash-o" aria-hidden="true" style="color:white"></i>
-            <i class="fa fa-paint-brush" aria-hidden="true" style="color:white"></i>
-
-            </br>
-            </br>
-            <p style="Color: white"> Descrição </p>
-
-            <p style="color:white ;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px">28/09/2020</p>
-          </div>
-        </div>
-
-        <div class="col-sm-1">
-        </div>
-
-        <div class="card col-sm" style="background:	#32CD32; height:300px">
-          <div class="card-body pr-0">
-            <h5 class="card-title pb-1 w-50" style="color:white; border-bottom:1px solid white; float:left; margin-right:70px">Card Title</h5>
-            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:white"></i>
-            <i class="fa fa-trash-o" aria-hidden="true" style="color:white"></i>
-            <i class="fa fa-paint-brush" aria-hidden="true" style="color:white"></i>
-
-            </br>
-            </br>
-            <p style="Color: white"> Descrição </p>
-
-            <p style="color:white ;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px">28/09/2020</p>
-          </div>
-        </div>
-
-        <div class="col-sm-1">
-        </div>
-
-        <div class="card col-sm" style="background:#A020F0	; height:300px">
-          <div class="card-body pr-0">
-            <h5 class="card-title pb-1 w-50" style="color:white; border-bottom:1px solid white; float:left; margin-right:70px">Card Title</h5>
-            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:white"></i>
-            <i class="fa fa-trash-o" aria-hidden="true" style="color:white"></i>
-            <i class="fa fa-paint-brush" aria-hidden="true" style="color:white"></i>
-
-            </br>
-            </br>
-            <p style="Color: white"> Descrição </p>
-
-            <p style="color:white ;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px">28/09/2020</p>
-          </div>
-        </div>
-      </div>
+      </div> -->
     </div>
-
 
 
 
@@ -177,5 +110,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="scripts/listar.js"></script>
   </body>
 </html>
