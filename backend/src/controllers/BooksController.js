@@ -46,9 +46,9 @@ class BooksController{
             return res.status(400).json({ message: 'Book not found.' });
         }
 
-        const cards = await knex('books')
-            .join('cards', 'books.id', 'cards.book_id')
-            .select('*')
+        const cards = await knex('cards')
+            .select("*")
+            .where('book_id', id)
         
         const serializedCards = cards.map(card => {
             return {

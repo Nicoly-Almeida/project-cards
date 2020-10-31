@@ -15,11 +15,15 @@ form.addEventListener('submit', async (event)=>{
 //
     // Handless server response
     if (response.status === 200 || response.status === 201){
-        alert("Livro Cadastrado com sucesso");
+        window.location.href = "./mybooks.html"
     }else{
         alert("Ops... Ocorreu um erro durante o cadastro");
     }
+
+
 });
+
+
 
 
 

@@ -18,6 +18,7 @@ function signIn(provider) {
           if (user) {
             // User is signed in.
             var displayName = user.displayName;
+            window.location.href = "../mybooks.html"
           } else {
             // User is signed out.
             // ...
@@ -29,11 +30,11 @@ function signIn(provider) {
           console.log(error);
           alert('Falha na autenticação');
       });
+
 }
 document.querySelector("#google-singin").addEventListener("click", () => {
   var provider = new firebase.auth.GoogleAuthProvider();
   signIn(provider);
-  window.location.href = "../books.html"
 })
 
 

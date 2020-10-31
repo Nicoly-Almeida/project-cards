@@ -10,8 +10,8 @@ window.addEventListener("load", async () => {
 
       renderData += `
       <div class="book">
-          <a href="livro.html"><img src="${link_book}" /></a>
-        </div>
+          <a href="livro.html?${id}"><img src="../../assets/pdf.png" />${title}</a>
+      </div>
       `;
     }
 

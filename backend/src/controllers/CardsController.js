@@ -6,7 +6,7 @@ class CardsController{
 
         let date = new Date;
         let mes = Number(date.getMonth() + 1)
-        let data =  date.getDate() + "/" + 0 + mes + "/" + date.getFullYear()
+        let data =  date.getDate() + "/" + mes + "/" + date.getFullYear()
 
 
         const result = await knex('books').select("*").where('id', nbook)

@@ -1,10 +1,22 @@
 async function getContent(){
     try {
-        const response = await fetch("http://localhost:3333/cards");
+
+        var url = window.location.href; 
+
+        let res = url.split('?')
+
+        if (res[1] === undefined) {
+            alert('página sem parâmetros.');
+        } else {
+            var id = res[1]
+        }
+        const response = await fetch(`http://localhost:3333/books/${id}`);
 
         const data = await response.json();
 
-        show(data.result)
+        show(data.books)
+
+        show_card(data.serializedCards)
 
     } catch (error) {
         console.log(error)
@@ -12,59 +24,45 @@ async function getContent(){
 }
 
 getContent();
-let id = 0;
 
-function show(cards){
+function show(books){
     let output = ''
-    let container = document.getElementById("container")
-    let rows = document.getElementsByClassName("row mt-0")
-    let row = document.createElement("div")
-    row.classList.add("row")
-    let cardName = document.getElementById("cardName")
-    let textArea = document.getElementById("cardContent")
-    for(let i=0; i < rows.length; i++){
-        let divs = rows[i].getElementsByClassName("card-body")
-        let card = document.createElement("div")
-        card.classList.add("card")
-        card.classList.add("col-sm-5")
-        card.classList.add("mr-0")
-        card.classList.add("ml-0")
-        id++
-        card.setAttribute("name", id.toString())
-        card.id = id.toString()
-        card.style = "background:#3E50B0;"
-        console.log(divs)
-        if (divs.length < 4){
-            card.innerHTML += `
-            <div class="card-body pr-0">
-            <input readonly value="${cardName.value}" class="card-title pb-1 w-50" placeholder="New Card" style="color:white; border-bottom:1px solid white !important; float:left; margin-right:40px; background-color: #3E50B0; border: 0px solid"></input>
-            <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:white"></i>
-            <button type="button" class="btn" onclick="deleteNode(${id})"><i class="fa fa-trash-o" aria-hidden="true" style="color:white"></i></button>
-            <i class="fa fa-paint-brush" aria-hidden="true" style="color:white"></i>
 
+    for(book of books){
+        output += `
+            <iframe zoom="100%" src=${book.book_url.split(" ").join("%20")}></iframe>
+        `
+    }
+    document.querySelector(".p-0").innerHTML = output
+
+}
+
+function show_card(cards){
+    let output = ''
+
+    for (card of cards){
+        output += `
+        <h4>Cards Adicionados!</h4>
+        <hr />  
+        <div class="list">
+        <div class="card col-sm" style="background:#3E50B0; height:250px">
+          <div class="card-body pr-0">
+            <h6 class="card-title pb-1 w-50" style="color:white; border-bottom:1px solid white; float:left;margin-right:70px">${card.title}</h6></br>
+                <div id="icons">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:white"></i>
+                    <button id="delete-card" style="border:none;background-color:#3E50B0" onclick="deletar(${card.id})"><i class="fa fa-trash-o" aria-hidden="true" style="color:white"></i></button>
+                    <i class="fa fa-paint-brush" aria-hidden="true" style="color:white"></i>
+                </div>
             </br>
-            </br>
-            <textarea readonly placeholder="Descrição..." style="Color: white; background-color: #3E50B0; border: 0px solid">${textArea.value}</textarea>
-            
-            `
-            rows[i].appendChild(card)
-            rows[i].innerHTML += `
-            <div class="card col-sm-1 m-0 p-0" name=${id} style="visibility: hidden;">`
-            return
-        }else {
-            container.appendChild(row)
-        }
-        
-    }    
+            <p style="color: white">${card.description}</p>
+            <p style="color:white ;position: absolute; right:0; bottom:0; margin-bottom:15px;margin-right:15px">${card.data}</p>
+          </div>
+        </div>
+        </div>
+        `
+    }
 
     document.getElementById("root").innerHTML = output
 
 }
 
-function deleteNode(id){
-    let htmls = document.getElementsByName(id)
-    while(htmls.length > 0){
-        htmls[0].remove()
-    }
-
-}

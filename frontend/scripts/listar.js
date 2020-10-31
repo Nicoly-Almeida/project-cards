@@ -34,7 +34,6 @@ function show(cards){
         card.setAttribute("name", id.toString())
         card.id = id.toString()
         card.style = "background:#3E50B0;"
-        console.log(divs)
         if (divs.length < 3){
             card.innerHTML += `
             <div class="card-body pr-0">
@@ -69,3 +68,4 @@ function deleteNode(id){
     }
 
 }
+
