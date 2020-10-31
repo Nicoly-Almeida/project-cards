@@ -1,18 +1,20 @@
 const host = "http://127.0.0.1:3333";
 const form = document.getElementById('create-form');
 
-form.addEventListener('submit', async (event)=>{
+form.addEventListener("submit", (event)=>{
     event.preventDefault();
-
+   
     
     const fd= new FormData(form);
 
-    const response = await fetch(`${host}/book`,{
+    fetch(`${host}/book`,{
         method: "POST",
         body:fd,
     });
-
+}
+);
 //
+
     // Handless server response
     if (response.status === 200 || response.status === 201){
         window.location.href = "./mybooks.html"
@@ -21,7 +23,7 @@ form.addEventListener('submit', async (event)=>{
     }
 
 
-});
+
 
 
 
