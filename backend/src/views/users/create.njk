@@ -1,0 +1,45 @@
+{% extends "layout.njk" %}
+
+{% set title = "Cadastrar" %}
+
+{% block content %}
+
+<h1 style="font-size: 90px; color:#3E50B0"><b>Login</b></h1>
+      <h1 style="font-size: 80px; color:#3E50B0;" class="mb-3">  {{ title }}</h1>
+
+    <!-- Cadastro -->
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md">
+          <!-- Nome!-->
+          <input type="text" id="name" class="form-control mt-0  " placeholder="Nome"
+            style="border-top:1px solid #fff; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #3E50B0;">
+        </div>
+
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <input type="email" id="email" class="form-control mt-0" id="inputEmail4" placeholder="Email"
+            style="border-top:1px solid #fff; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #3E50B0;">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <input type="password" id="senha" class="form-control" id="inputPassword4" placeholder="Senha"
+            style="border-top:1px solid #fff; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #3E50B0;">
+        </div>
+        <div class="form-group col-md-6">
+          <input type="password" id="senha-confirmed" class="form-control" id="inputPassword4"
+            placeholder="Repita a senha"
+            style="border-top:1px solid #fff; border-right:1px solid #fff; border-left:1px solid #fff; border-bottom:1px solid #3E50B0;">
+        </div>
+      </div>
+
+      <!-- Continuar -->
+      <div class="text-center mb-5 mt-4">
+        <button type="button" class="btn borda-redonda" id="envio"
+          style="background-color: #3E50B0;color:white; padding-left: 50px;padding-right:50px; border-radius: 50px !important;"><span
+            style="font-size:22px"><b><i>CADASTRAR</i></b></span></button>
+      </div>
+    </form>
+{% endblock %}

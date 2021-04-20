@@ -3,6 +3,8 @@ const multer = require("multer");
 const multerConfig = require("./config/multerConfig");
 const book = require("./controllers/BooksController");
 const card = require("./controllers/CardsController");
+const usersController = require('../controllers/UsersController');
+
 
 const routes = express.Router();
 
@@ -25,6 +27,9 @@ routes.delete("/cards", card.deletecard)
 
 //Coleta  de dados
 routes.get("/cards", card.listcards)
+
+router.get('/signup', usersController.create);
+router.post('/signup', usersController.store);
 
 
 module.exports = routes;
